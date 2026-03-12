@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Reference</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-tertiary: #6e7681;
+            --border: #30363d;
+            --accent: #58a6ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.5;
+            padding: 16px;
+            padding-bottom: 60px;
+        }
+
+        header {
+            text-align: center;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .style-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .style-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .style-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', monospace;
+        }
+
+        .style-meta {
+            font-size: 11px;
+            color: var(--text-tertiary);
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', monospace;
+        }
+
+        .style-sample {
+            color: var(--text-primary);
+        }
+
+        /* Typography Styles */
+        .largeTitle { font-size: 34px; font-weight: 400; }
+        .largeTitle-semibold { font-size: 34px; font-weight: 600; }
+        .title1 { font-size: 28px; font-weight: 400; }
+        .title1-semibold { font-size: 28px; font-weight: 600; }
+        .title2 { font-size: 22px; font-weight: 400; }
+        .title2-semibold { font-size: 22px; font-weight: 600; }
+        .title3 { font-size: 20px; font-weight: 400; }
+        .title3-semibold { font-size: 20px; font-weight: 600; }
+        .headline { font-size: 17px; font-weight: 600; }
+        .body { font-size: 17px; font-weight: 400; }
+        .body-semibold { font-size: 17px; font-weight: 600; }
+        .callout { font-size: 16px; font-weight: 400; }
+        .callout-semibold { font-size: 16px; font-weight: 600; }
+        .subheadline { font-size: 15px; font-weight: 400; }
+        .subheadline-semibold { font-size: 15px; font-weight: 600; }
+        .footnote { font-size: 13px; font-weight: 400; }
+        .footnote-semibold { font-size: 13px; font-weight: 600; }
+        .caption1 { font-size: 12px; font-weight: 400; }
+        .caption1-semibold { font-size: 12px; font-weight: 600; }
+        .caption2 { font-size: 11px; font-weight: 400; }
+        .caption2-semibold { font-size: 11px; font-weight: 600; }
+
+        /* Spacing Section */
+        .spacing-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .spacing-visual {
+            background: var(--accent);
+            height: 20px;
+            border-radius: 4px;
+            opacity: 0.7;
+        }
+
+        .spacing-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', monospace;
+            min-width: 70px;
+        }
+
+        .spacing-value {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Color swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 8px;
+        }
+
+        .color-swatch {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .color-preview {
+            height: 48px;
+        }
+
+        .color-info {
+            padding: 8px;
+        }
+
+        .color-name {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', monospace;
+        }
+
+        /* Quick copy */
+        .copy-hint {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-tertiary);
+            margin-top: 24px;
+            padding: 12px;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 24px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--text-tertiary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Typography Reference</h1>
+        <p>SF Pro · iOS System Fonts</p>
+    </header>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('typography')">Typography</button>
+        <button class="tab" onclick="showTab('spacing')">Spacing</button>
+        <button class="tab" onclick="showTab('colors')">Colors</button>
+    </div>
+
+    <div id="typography" class="tab-content active">
+        <div class="section">
+            <div class="section-title">Large Titles</div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.largeTitle</span>
+                    <span class="style-meta">34pt / Regular</span>
+                </div>
+                <div class="style-sample largeTitle">Large Title</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.largeTitle (semibold)</span>
+                    <span class="style-meta">34pt / Semibold</span>
+                </div>
+                <div class="style-sample largeTitle-semibold">Large Title Bold</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Titles</div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.title1</span>
+                    <span class="style-meta">28pt</span>
+                </div>
+                <div class="style-sample title1">Title 1</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.title2</span>
+                    <span class="style-meta">22pt</span>
+                </div>
+                <div class="style-sample title2">Title 2</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.title3</span>
+                    <span class="style-meta">20pt</span>
+                </div>
+                <div class="style-sample title3">Title 3</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Body Text</div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.headline</span>
+                    <span class="style-meta">17pt / Semibold</span>
+                </div>
+                <div class="style-sample headline">Headline</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.body</span>
+                    <span class="style-meta">17pt / Regular</span>
+                </div>
+                <div class="style-sample body">Body text for reading content</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.callout</span>
+                    <span class="style-meta">16pt</span>
+                </div>
+                <div class="style-sample callout">Callout text</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.subheadline</span>
+                    <span class="style-meta">15pt</span>
+                </div>
+                <div class="style-sample subheadline">Subheadline text</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Small Text</div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.footnote</span>
+                    <span class="style-meta">13pt</span>
+                </div>
+                <div class="style-sample footnote">Footnote text</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.caption1</span>
+                    <span class="style-meta">12pt</span>
+                </div>
+                <div class="style-sample caption1">Caption 1 text</div>
+            </div>
+            <div class="style-card">
+                <div class="style-header">
+                    <span class="style-name">.caption2</span>
+                    <span class="style-meta">11pt</span>
+                </div>
+                <div class="style-sample caption2">Caption 2 text</div>
+            </div>
+        </div>
+
+        <div class="copy-hint">
+            <strong>SwiftUI:</strong> .font(.body) or .font(.system(.body, weight: .semibold))
+        </div>
+    </div>
+
+    <div id="spacing" class="tab-content">
+        <div class="section">
+            <div class="section-title">Grid Spacing</div>
+            <div class="spacing-row">
+                <span class="spacing-label">grid1</span>
+                <div class="spacing-visual" style="width: 4px;"></div>
+                <span class="spacing-value">4pt</span>
+            </div>
+            <div class="spacing-row">
+                <span class="spacing-label">grid2</span>
+                <div class="spacing-visual" style="width: 8px;"></div>
+                <span class="spacing-value">8pt</span>
+            </div>
+            <div class="spacing-row">
+                <span class="spacing-label">grid3</span>
+                <div class="spacing-visual" style="width: 12px;"></div>
+                <span class="spacing-value">12pt</span>
+            </div>
+            <div class="spacing-row">
+                <span class="spacing-label">grid4</span>
+                <div class="spacing-visual" style="width: 16px;"></div>
+                <span class="spacing-value">16pt</span>
+            </div>
+            <div class="spacing-row">
+                <span class="spacing-label">grid5</span>
+                <div class="spacing-visual" style="width: 20px;"></div>
+                <span class="spacing-value">20pt</span>
+            </div>
+            <div class="spacing-row">
+                <span class="spacing-label">grid6</span>
+                <div class="spacing-visual" style="width: 24px;"></div>
+                <span class="spacing-value">24pt</span>
+            </div>
+        </div>
+
+        <div class="copy-hint">
+            <strong>SwiftUI:</strong> Spacing.grid4 → 16pt
+        </div>
+    </div>
+
+    <div id="colors" class="tab-content">
+        <div class="section">
+            <div class="section-title">Backgrounds</div>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #0d1117;"></div>
+                    <div class="color-info"><span class="color-name">backgroundPrimary</span></div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #161b22;"></div>
+                    <div class="color-info"><span class="color-name">backgroundSecondary</span></div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #21262d;"></div>
+                    <div class="color-info"><span class="color-name">backgroundTertiary</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Text</div>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #e6edf3;"></div>
+                    <div class="color-info"><span class="color-name">textPrimary</span></div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #8b949e;"></div>
+                    <div class="color-info"><span class="color-name">textSecondary</span></div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #6e7681;"></div>
+                    <div class="color-info"><span class="color-name">textTertiary</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Status</div>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #3fb950;"></div>
+                    <div class="color-info"><span class="color-name">green500 (open)</span></div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #a371f7;"></div>
+                    <div class="color-info"><span class="color-name">purple500 (closed)</span></div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #f85149;"></div>
+                    <div class="color-info"><span class="color-name">red600 (failure)</span></div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #d29922;"></div>
+                    <div class="color-info"><span class="color-name">yellow600 (pending)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copy-hint">
+            <strong>SwiftUI:</strong> Color.textPrimary, Primer.Colors.open
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
